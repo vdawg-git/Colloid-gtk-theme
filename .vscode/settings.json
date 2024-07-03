@@ -1,0 +1,15 @@
+{
+	"editor.formatOnSave": false,
+	"editor.formatOnPaste": false,
+	"editor.fontSize": 16,
+	"search.exclude": {
+		"**/*-default": true,
+		"**/*.hidpi": true,
+		"**/*.rc": true,
+		"**/*.sample": true,
+		"**/*.sh": true,
+		"**/*.svg": true,
+		"**/*.txt": true,
+		"**/*.xml": true
+	}
+}

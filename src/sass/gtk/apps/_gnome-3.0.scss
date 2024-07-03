@@ -11,9 +11,9 @@ $nautilus: $base-alt;
 .nautilus-window {
   &.background.csd {
     border-radius: 0 0 $window-radius $window-radius;
-    background-color: $nautilus;
+    background-color: transparentize($nautilus,$opac);
 
-    &:backdrop { background-color: $base; }
+    &:backdrop { background-color: transparentize($base,$opac); }
 
     > grid.horizontal > paned.horizontal > separator,
     > deck > box.vertical > paned.horizontal > separator { margin-left: if($variant == 'light', -1px, 0); }

@@ -15,11 +15,11 @@ text color for entries, views and content in general */
 
 /*
 widget base background color */
-@define-color theme_bg_color #{"" + $background};
+@define-color theme_bg_color #{"" + transparentize($background,$opac)};
 
 /*
 text widgets and the like base background color */
-@define-color theme_base_color #{"" + $base};
+@define-color theme_base_color #{"" + transparentize($base,$opac)};
 
 /*
 base background color of selections */
@@ -88,7 +88,11 @@ these are pretty self explicative */
 these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
 
-$windows-border: if($variant == 'light', mix(black, $base, 35%), mix(black, $base, 80%));
+$windows-border: if(
+	$variant == "light",
+	mix(black, $base, 35%),
+	mix(black, $base, 80%)
+);
 
 @define-color wm_title #{"" + $titlebar-text};
 @define-color wm_unfocused_title #{"" + $titlebar-text-secondary};
@@ -99,8 +103,8 @@ $windows-border: if($variant == 'light', mix(black, $base, 35%), mix(black, $bas
 
 @define-color wm_button_icon #{"" + white};
 
-@if $colorscheme == 'dracula' {
-  @define-color wm_button_icon alpha(#{black}, 0.5);
+@if $colorscheme == "dracula" {
+	@define-color wm_button_icon alpha(#{black}, 0.5);
 }
 
 @define-color wm_button_close_hover_bg #{"" + $button-close};

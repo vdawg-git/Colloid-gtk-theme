@@ -127,15 +127,17 @@ $dark_5: #000000;
 @define-color error_color #{$error};
 
 // Window
-@define-color window_bg_color #{$background};
+@define-color window_bg_color #{transparentize($background,$opac)};
+// @define-color window_bg_color #{gtkalpha($background,0.2)};
 @define-color window_fg_color #{$text};
 
 // Views - e.g. text view or tree view
-@define-color view_bg_color #{$base};
+@define-color view_bg_color #{transparentize($base,$opac)};
+// @define-color view_bg_color transparent;
 @define-color view_fg_color #{$text};
 
 // Header bar, search bar, tab bar
-@define-color headerbar_bg_color #{$titlebar};
+@define-color headerbar_bg_color #{transparentize($titlebar,$opac)};
 @define-color headerbar_fg_color #{$titlebar-text};
 @define-color headerbar_border_color #{$border};
 @define-color headerbar_backdrop_color #{$titlebar-backdrop};
